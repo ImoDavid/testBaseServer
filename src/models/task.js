@@ -5,14 +5,14 @@ const { model } = mongoose;
 const taskSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true
+    required: true,
   },
   completed: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 });
 
-const Task = model('User', taskSchema);
+const Task = model('Task', taskSchema);
 
 export { Task };

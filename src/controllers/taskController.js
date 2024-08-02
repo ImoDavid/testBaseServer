@@ -27,7 +27,7 @@ const updateTask = async (req, res) => {
     const updatedTask = await Task.findByIdAndUpdate(
       id,
       { completed },
-      { new: true },
+      { new: false },
     );
     if (!updatedTask) {
       return res.status(404).json({ message: 'Task not found' });
